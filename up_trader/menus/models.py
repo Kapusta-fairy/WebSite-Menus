@@ -6,8 +6,9 @@ class Menu(models.Model):
     slug = models.SlugField(max_length=20, unique=True, db_index=True,
                             verbose_name="slug")
     dependence = models.ForeignKey('Menu', on_delete=models.CASCADE,
-                                   verbose_name='зависимость', default=None)
-    url = models.URLField(max_length=200, verbose_name='ссылка')
+                                   verbose_name='зависимость', null=True,
+                                   blank=True)
+    url = models.CharField(max_length=200, verbose_name='ссылка')
 
     def __str__(self):
         return self.name
