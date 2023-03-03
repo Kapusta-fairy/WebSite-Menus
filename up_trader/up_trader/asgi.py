@@ -1,5 +1,5 @@
 """
-ASGI config for menus project.
+ASGI config for up_trader project.
 
 It exposes the ASGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.asgi import get_asgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'menus.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'up_trader.settings')
 
 application = get_asgi_application()
