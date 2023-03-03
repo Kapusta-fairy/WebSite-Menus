@@ -19,6 +19,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    'additional_menus.apps.AdditionalMenusConfig',
+    'menus.apps.MenusConfig',
 ]
 
 MIDDLEWARE = [
@@ -36,7 +39,7 @@ ROOT_URLCONF = 'up_trader.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
